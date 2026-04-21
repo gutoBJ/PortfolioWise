@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap');
+
+:root {
+    --fundo: #0F172A;
+    --secundario: #1E293B;
+    --destaque: #38BDF8;
+    --texto-principal: #E2E8F0;
+    --texto-secundario: #94A3B8;
+    --font-titulos-nome: "Press Start 2P", system-ui;
+    --font-text-default: "Poppins", sans-serif;
+}
+
+body {
+    background-color: var(--fundo);
+}
+
+#chk {
+    display: none;
+}
+
+.switch {
+    position: relative;
+    background-color: #777;
+    width: 60px;
+    height: 30px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.slider {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    transition: all .5s ease-in-out;
+}
+
+#chk:checked ~ .switch {
+    background-color: var(--destaque);
+}
+
+#chk:checked ~ .switch .slider {
+    transform: translateX(30px);
+}
+
+.texto-second {
+    color: var(--texto-secundario);
+    font-family: var(--font-text-default);
+}
+
+.texto-principal {
+    color: var(--texto-principal);
+    font-family: var(--font-titulos-nome);
+}
+
+#menu {
+    font-size: 40px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#menu:hover {
+    color: var(--destaque);
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    backdrop-filter: blur(6px);
+    z-index: 99;
+}
+
+.container-switch {
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav-mobiles {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 210px;
+    display: none;
+    justify-content: center;
+    align-items:center;
+    row-gap: 10px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 10px #00000060;
+    background-color: var(--secundario);
+}
+
+#nav-mobiles nav {
+    margin-top: 50px;
+}
+
+#nav-mobiles li {
+    margin-top: 6px;
+}
+
+#nav-mobiles a {
+    transition: .5s;
+}
+
+#nav-mobiles a:hover {
+    color: var(--destaque);
+}
+
+#close {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    font-size: 40px;
+    transition: .5s;
+}
+
+#close:hover {
+    color: #ff0000;
+}
+
+.sessoes {
+    width: 100%;
+    padding: 30px;
+}
+
+.sessoes h1 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.container-perfil {
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+}
+
+.container-perfil-redes {
+    width: 100%;
+    display: flex;
+    row-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-foto {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.container-foto img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.container-redes {
+    width: 100px;
+    display: flex;
+    gap: 10px;
+}
+
+.container-redes i {
+    color: var(--texto-secundario);
+    cursor: pointer;
+    font-size: 25px;
+    transition: .5s;
+}
+
+.container-redes i:hover {
+    color: var(--destaque);
+    transform: scale(1.08);
+}
+
+.container-curriculo {
+    width: 100%;
+    height: 636px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    align-items: center;
+}
+
+.container-curriculo iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.links {
+    height: 60px;
+}
+
+.bio {
+    text-align: justify;
+}
+
+.container-projetos {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+}
+
+.card-projetos {
+    width: 300px;
+    height: 800px;
+    background-color: var(--secundario);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.card-projetos:hover {
+    transform: scale(1.06);
+    box-shadow: 0 6px 10px 0 #00000057;
+}
+
+.container-contato {
+    width: 100%;
+}
+
+.container-inputs {
+    width: 100%;
+    padding: 20px;
+}
+
+.container-inputs input, textarea, #btContato {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 15px;
+    background-color: var(--secundario);   /* secundário */
+    color: var(--texto-principal);              /* texto */
+    border: 1px solid #334155;   /* borda sutil */
+    padding: 12px;
+    border-radius: 8px;
+    transition: .5s;
+}
+
+.container-inputs textarea {
+    resize: none;
+    height: 100px;
+}
+
+.container-inputs input:focus, textarea:focus {
+    border-color: var(--destaque);
+    box-shadow: 0 0 0 2px rgba(56,189,248,0.3);
+}
+
+.container-inputs input::placeholder, textarea::placeholder {
+    font-family: var(--font-text-default);
+    color: #94A3B8;
+}
+
+.container-inputs input:hover, textarea:hover {
+    border-color: var(--destaque);
+}
+
+.container-bt {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container-inputs #btContato {
+    width: 200px;
+    height: 50px;
+    color: var(--texto-secundario);
+    cursor: pointer;
+}
+
+.container-inputs #btContato:hover {
+    border-color: var(--destaque);
+    box-shadow: 0 0 0 2px rgba(56,189,248,0.3);
+    transform: scale(1.03);
+}
+
+.arrows {
+    position: fixed;
+    right: 40px;
+    bottom: 300px;
+    width: 60px;
+    height: 172px;
+    bottom: 20px;
+    transition: 0.6s;
+    transform: rotate(180deg);
+}
+
+.arrows:hover {
+    transform: scale(1.1) rotate(180deg);
+}
+
+.arrows path {
+    stroke: #fff;
+    fill: transparent;
+    stroke-width: 1px;
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+    0% {opacity: 0;}
+    40% {opacity: 1;}
+    80% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@-webkit-keyframes arrow {
+    0% {opacity: 0;}
+    40% {opacity: 1;}
+    80% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+.arrows path.a1 {
+    animation-delay: -1s;
+    -webkit-animation-delay: -1s;
+}
+
+.arrows path.a2 {
+    animation-delay: -0.5s;
+    -webkit-animation-delay: -0.5s;
+}
+
+.arrows path.a3 {
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+}

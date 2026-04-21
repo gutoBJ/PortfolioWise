@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protótipo</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="./assets/euPixel.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="sidebar" style="display: none;">
+        <nav>
+            <ul>
+                <li><a href="#sessao-perfil">Meu perfil</a></li>
+                <li><a href="#sessao-perfil"></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <header>
+        <div class="container-switch">
+            <span class="texto-second">Ativar modo claro</span>
+            <input type="checkbox" id="chk">
+            <label for="chk" class="switch">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div>
+            <span class="material-symbols-outlined texto-principal" id="menu">menu</span>
+        </div>
+
+        <div id="nav-mobiles">
+            <div>
+                <span class="material-symbols-outlined texto-second" id="close">
+                    close
+                </span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#sessao-bemvindo" class="texto-principal">Bem-vindo</a></li>
+                    <li><a href="#sessao-perfil" class="texto-principal">Meu perfil</a></li>
+                    <li><a href="#sessao-sobre" class="texto-principal">Sobre mim</a></li>
+                    <li><a href="#sessao-projetos" class="texto-principal">Projetos</a></li>
+                    <li><a href="#sessao-contato" class="texto-principal">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div id="sessao-bemvindo" class="links"></div>
+        <section class="sessoes bemvindo">
+            <h1 class="texto-principal">Bem-Vindo!</h1>
+        </section>
+        <div id="sessao-perfil" class="links"></div>
+        <section class="sessoes perfil">
+            <h1 class="texto-principal">Meu perfil</h1>
+            <div class="container-perfil">
+                <div class="container-perfil-redes">
+                    <div class="container-foto">
+                        <img src="./assets/minhaFoto.jpeg" alt="Minha foto">
+                    </div>
+                    <div class="container-redes">
+                        <a href="https://github.com/gutoBJ" target="_blank" title="Github">
+                            <i class="fab fa-github"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/augusto-chupernate-29a767253/" target="_blank"
+                            title="Linkedin">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/augustobj_dev/" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="container-curriculo">
+                    <h2 class="texto-second">Meu currículo:</h2>
+                    <iframe src="./assets/meuCurriculo.pdf" frameborder="0"></iframe>
+                </div>
+            </div>
+        </section>
+        <div id="sessao-sobre" class="links"></div>
+        <section class="sessoes sobre">
+            <h1 class="texto-principal">Sobre mim</h1>
+            <p class="texto-second bio">Estudante do Curso Superior de Tecnologia em Análise
+                e Desenvolvimento de Sistemas (4º Período) na
+                Faculdade Senac PR, com base sólida em HTML, CSS e
+                JavaScript, e me desenvolvendo em React e Node.js.
+                Trabalho na empresa Decorpol, atuando em
+                prospecção de clientes, já atuei na mesma como
+                projetista de edificações, utilizando as ferramentas
+                AutoCAD e SketchUp. Tendo, de início, objetivo de
+                estágiar em alguma área de meu curso, e assim, evoluir
+                como desenvolvedor e analista de sistemas. Desenvolvi
+                projetos práticos de HTML e CSS, projetos com
+                JavaScript e um projeto com React. Gosto de aprender
+                coisas novas, de desafios, de trabalhar em equipe, entre
+                outras coisas. Estou sempre buscando evoluir mais!
+            </p>
+        </section>
+        <div id="sessao-projetos" class="links"></div>
+        <section class="sessoes projetos">
+            <h1 class="texto-principal">Projetos</h1>
+            <div class="container-projetos">
+                <div class="card-projetos">
+                    <figure>
+                        <img src="imagem.jpg" alt="Descrição da Imagem">
+                        <figcaption class="texto-second">Esta é a legenda da imagem ou do card</figcaption>
+                    </figure>
+                </div>
+                <div class="card-projetos">
+                    <figure>
+                        <img src="imagem.jpg" alt="Descrição da Imagem">
+                        <figcaption class="texto-second">Esta é a legenda da imagem ou do card</figcaption>
+                    </figure>
+                </div>
+                <div class="card-projetos">
+                    <figure>
+                        <img src="imagem.jpg" alt="Descrição da Imagem">
+                        <figcaption class="texto-second">Esta é a legenda da imagem ou do card</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <div id="sessao-contato" class="links"></div>
+        <section class="sessoes contato">
+            <h1 class="texto-principal">Contato</h1>
+
+            <div class="container-contato">
+                <form action="">
+                    <div class="container-inputs">
+                        <label for="nome" class="texto-second">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Insira seu nome completo" required>
+
+                        <label for="email" class="texto-second">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Insira um email válido" required>
+
+                        <label for="msg" class="texto-second">Mensagem:</label>
+                        <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Insira uma mensagem" required></textarea>
+
+                        <div class="container-bt">
+                            <button type="submit" id="btContato" class="texto-second">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <a href="#sessao-bemvindo" title="Voltar ao topo">
+            <svg class="arrows">
+                <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                <path class="a3" d="M0 40 L30 72 L60 40"></path>
+            </svg>
+        </a>
+    </main>
+
+    <footer>
+        <p class="texto-second">Augusto Benjamin Chupernate</p>
+        <p class="texto-second">Todos os direitos reservados ©</p>
+    </footer>
+
+    <script src="./script/script.js"></script>
+</body>
+
+</html>

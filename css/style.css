@@ -135,7 +135,9 @@ header {
 
 .sessoes {
     width: 100%;
+    margin-top: 60px;
     padding: 30px;
+    scroll-margin-top: 60px;
 }
 
 .sessoes h1 {
@@ -300,7 +302,7 @@ header {
     right: 40px;
     bottom: 300px;
     width: 60px;
-    height: 172px;
+    height: 80px;
     bottom: 20px;
     transition: 0.6s;
     transform: rotate(180deg);

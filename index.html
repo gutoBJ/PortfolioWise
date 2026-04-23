@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protótipo</title>
+    <title>Portfólio - Augusto Benjamin Chupernate</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="sidebar" style="display: none;">
+    <div class="sidebar">
         <nav>
             <ul>
                 <li><a href="#sessao-perfil">Meu perfil</a></li>
@@ -23,31 +23,33 @@
     </div>
 
     <header>
+        <a href="/">
+            <h3 class="logo texto-principal">Augusto</h3>
+        </a>
         <div class="container-switch">
-            <span class="texto-second">Ativar modo claro</span>
+            <span class="texto-second">Modo claro</span>
             <input type="checkbox" id="chk">
             <label for="chk" class="switch">
                 <span class="slider"></span>
             </label>
         </div>
-
-        <div>
+        <button id="bt-menu" aria-label="Abrir menu">
             <span class="material-symbols-outlined texto-principal" id="menu">menu</span>
-        </div>
+        </button>
 
         <div id="nav-mobiles">
-            <div>
+            <button id="bt-close" aria-label="Fechar menu">
                 <span class="material-symbols-outlined texto-second" id="close">
                     close
                 </span>
-            </div>
+            </button>
             <nav>
                 <ul>
-                    <li><a href="#sessao-bemvindo" class="texto-principal">Bem-vindo</a></li>
-                    <li><a href="#sessao-perfil" class="texto-principal">Meu perfil</a></li>
-                    <li><a href="#sessao-sobre" class="texto-principal">Sobre mim</a></li>
-                    <li><a href="#sessao-projetos" class="texto-principal">Projetos</a></li>
-                    <li><a href="#sessao-contato" class="texto-principal">Contato</a></li>
+                    <li><a href="#sessao-bemvindo" class="texto-principal nav-link">Bem-vindo</a></li>
+                    <li><a href="#sessao-perfil" class="texto-principal nav-link">Meu perfil</a></li>
+                    <li><a href="#sessao-sobre" class="texto-principal nav-link">Sobre mim</a></li>
+                    <li><a href="#sessao-projetos" class="texto-principal nav-link">Projetos</a></li>
+                    <li><a href="#sessao-contato" class="texto-principal nav-link">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -55,7 +57,13 @@
 
     <main>
         <section class="sessoes bemvindo" id="sessao-bemvindo">
-            <h1 class="texto-principal">Bem-Vindo!</h1>
+            <h1 class="nome texto-principal" id="typingName">Augusto B. Chupernate</h1>
+            <div class="container-pixel">
+                <a href="/">
+                    <img src="./assets/EuPixel-parado.png" id="euPixel" alt="Imagem de Augusto Chupernate em pixel">
+                </a>
+            </div>
+            <h2 class="texto-second texto-dev">Procurando por um <b class="texto-principal">Desenvolvedor Junior</b>?</h2>
         </section>
         <section class="sessoes perfil" id="sessao-perfil">
             <h1 class="texto-principal">Meu perfil</h1>
@@ -81,8 +89,9 @@
                 </div>
 
                 <div class="container-curriculo">
-                    <h2 class="texto-second">Meu currículo:</h2>
-                    <iframe src="./assets/meuCurriculo.pdf" frameborder="0"></iframe>
+                    <div class="container-bt">
+                        <button type="submit" id="btContato" class="texto-second" download="./assets/meuCurriculo.pdf">Baixar Meu Currículo</button>
+                    </div>
                 </div>
             </div>
         </section>

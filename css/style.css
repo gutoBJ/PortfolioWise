@@ -115,8 +115,9 @@ header.scrolled {
 }
 
 #menu {
-    font-size: 40px;
+    font-size: 33px;
     transition: .5s;
+    color: var(--texto-secundario);
 }
 
 #menu:hover {
@@ -204,11 +205,12 @@ header button {
 
 #close {
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 10px;
+    left: 10px;
     cursor: pointer;
-    font-size: 40px;
+    font-size: 30px;
     transition: .5s;
+    color: var(--texto-secundario);
 }
 
 #close:hover {
@@ -324,8 +326,9 @@ main {
 }
 
 .container-redes {
-    width: 100px;
+    width: 100%;
     display: flex;
+    justify-content: center;
     gap: 10px;
 }
 

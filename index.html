@@ -7,9 +7,7 @@
     <title>Portfólio - Augusto Benjamin Chupernate</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="shortcut icon" href="./assets/euPixel.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/Icon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -34,14 +32,13 @@
             </label>
         </div>
         <button id="bt-menu" aria-label="Abrir menu">
-            <span class="material-symbols-outlined texto-principal" id="menu">menu</span>
+            <i class="fa-solid fa-bars" id="menu"></i>
         </button>
 
         <div id="nav-mobiles">
             <button id="bt-close" aria-label="Fechar menu">
-                <span class="material-symbols-outlined texto-second" id="close">
-                    close
-                </span>
+                <!-- <i class="fa-solid fa-circle-xmark" id="close"></i> -->
+                <i class="fa-regular fa-circle-xmark" id="close"></i>
             </button>
             <nav>
                 <ul>
@@ -63,7 +60,8 @@
                     <img src="./assets/EuPixel-parado.png" id="euPixel" alt="Imagem de Augusto Chupernate em pixel">
                 </a>
             </div>
-            <h2 class="texto-second texto-dev">Procurando por um <b class="texto-principal">Desenvolvedor Junior</b>?</h2>
+            <h2 class="texto-second texto-dev">Procurando por um <b class="texto-principal">Desenvolvedor Junior</b>?
+            </h2>
         </section>
         <section class="sessoes perfil" id="sessao-perfil">
             <h1 class="texto-principal">Meu perfil</h1>
@@ -74,23 +72,28 @@
                     </div>
                     <div class="container-redes">
                         <a href="https://github.com/gutoBJ" target="_blank" title="Github">
-                            <i class="fab fa-github"></i>
+                            <i class="fa-brands fa-github"></i>
                         </a>
 
                         <a href="https://www.linkedin.com/in/augusto-chupernate-29a767253/" target="_blank"
                             title="Linkedin">
-                            <i class="fab fa-linkedin"></i>
+                            <i class="fa-brands fa-linkedin"></i>
                         </a>
 
                         <a href="https://www.instagram.com/augustobj_dev/" target="_blank" title="Instagram">
-                            <i class="fab fa-instagram"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="https://discord.com/channels/@GutoBJ" target="_blank" title="Discord">
+                            <i class="fa-brands fa-discord"></i>
                         </a>
                     </div>
                 </div>
 
                 <div class="container-curriculo">
                     <div class="container-bt">
-                        <button type="submit" id="btContato" class="texto-second" download="./assets/meuCurriculo.pdf">Baixar Meu Currículo</button>
+                        <button type="submit" id="btContato" class="texto-second"
+                            download="./assets/meuCurriculo.pdf">Baixar Meu Currículo</button>
                     </div>
                 </div>
             </div>
@@ -118,19 +121,19 @@
             <div class="container-projetos">
                 <div class="card-projetos">
                     <figure>
-                        <img src="imagem.jpg" alt="Descrição da Imagem">
+                        <img src="" alt="Descrição da Imagem">
                         <figcaption class="texto-second">Esta é a legenda da imagem ou do card</figcaption>
                     </figure>
                 </div>
                 <div class="card-projetos">
                     <figure>
-                        <img src="imagem.jpg" alt="Descrição da Imagem">
+                        <img src="" alt="Descrição da Imagem">
                         <figcaption class="texto-second">Esta é a legenda da imagem ou do card</figcaption>
                     </figure>
                 </div>
                 <div class="card-projetos">
                     <figure>
-                        <img src="imagem.jpg" alt="Descrição da Imagem">
+                        <img src="" alt="Descrição da Imagem">
                         <figcaption class="texto-second">Esta é a legenda da imagem ou do card</figcaption>
                     </figure>
                 </div>
@@ -149,7 +152,8 @@
                         <input type="email" name="email" id="email" placeholder="Insira um email válido" required>
 
                         <label for="msg" class="texto-second">Mensagem:</label>
-                        <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Insira uma mensagem" required></textarea>
+                        <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Insira uma mensagem"
+                            required></textarea>
 
                         <div class="container-bt">
                             <button type="submit" id="btContato" class="texto-second">Enviar</button>
@@ -174,6 +178,7 @@
     </footer>
 
     <script src="./script/script.js"></script>
+    <script src="https://kit.fontawesome.com/664287d9ba.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -22,22 +22,15 @@
 
     <header>
         <a href="/">
-            <h3 class="logo texto-principal">Augusto</h3>
+            <h3 class="logo texto-principal">Augusto.<b id="text-dev">dev</b></h3>
         </a>
-        <div class="container-switch">
-            <span class="texto-second">Modo claro</span>
-            <input type="checkbox" id="chk">
-            <label for="chk" class="switch">
-                <span class="slider"></span>
-            </label>
-        </div>
+
         <button id="bt-menu" aria-label="Abrir menu">
             <i class="fa-solid fa-bars" id="menu"></i>
         </button>
 
         <div id="nav-mobiles">
             <button id="bt-close" aria-label="Fechar menu">
-                <!-- <i class="fa-solid fa-circle-xmark" id="close"></i> -->
                 <i class="fa-regular fa-circle-xmark" id="close"></i>
             </button>
             <nav>
@@ -53,6 +46,26 @@
     </header>
 
     <main>
+        <div class="container-switch">
+            <button id="themeToggle">
+                <span id="icon-theme" title="Mudar para o tema claro">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="bts-modo lucide lucide-sun-icon lucide-sun">
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 2v2" />
+                        <path d="M12 20v2" />
+                        <path d="m4.93 4.93 1.41 1.41" />
+                        <path d="m17.66 17.66 1.41 1.41" />
+                        <path d="M2 12h2" />
+                        <path d="M20 12h2" />
+                        <path d="m6.34 17.66-1.41 1.41" />
+                        <path d="m19.07 4.93-1.41 1.41" />
+                    </svg>
+                </span>
+                <span class="texto-second">Tema</span>
+            </button>
+        </div>
         <section class="sessoes bemvindo" id="sessao-bemvindo">
             <h1 class="nome texto-principal" id="typingName">Augusto B. Chupernate</h1>
             <div class="container-pixel">
@@ -177,8 +190,8 @@
         <p class="texto-second">Todos os direitos reservados ©</p>
     </footer>
 
-    <script src="./script/script.js"></script>
     <script src="https://kit.fontawesome.com/664287d9ba.js" crossorigin="anonymous"></script>
+    <script src="./script/script.js"></script>
 </body>
 
 </html>

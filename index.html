@@ -38,6 +38,7 @@
                     <li><a href="#sessao-bemvindo" class="texto-principal nav-link">Bem-vindo</a></li>
                     <li><a href="#sessao-perfil" class="texto-principal nav-link">Meu perfil</a></li>
                     <li><a href="#sessao-sobre" class="texto-principal nav-link">Sobre mim</a></li>
+                    <li><a href="#sessao-habilidades" class="texto-principal nav-link">Habilidades</a></li>
                     <li><a href="#sessao-projetos" class="texto-principal nav-link">Projetos</a></li>
                     <li><a href="#sessao-contato" class="texto-principal nav-link">Contato</a></li>
                 </ul>
@@ -46,28 +47,29 @@
     </header>
 
     <main>
-        <div class="container-switch">
-            <button id="themeToggle">
-                <span id="icon-theme" title="Mudar para o tema claro">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="bts-modo lucide lucide-sun-icon lucide-sun">
-                        <circle cx="12" cy="12" r="4" />
-                        <path d="M12 2v2" />
-                        <path d="M12 20v2" />
-                        <path d="m4.93 4.93 1.41 1.41" />
-                        <path d="m17.66 17.66 1.41 1.41" />
-                        <path d="M2 12h2" />
-                        <path d="M20 12h2" />
-                        <path d="m6.34 17.66-1.41 1.41" />
-                        <path d="m19.07 4.93-1.41 1.41" />
-                    </svg>
-                </span>
-                <span class="texto-second">Tema</span>
-            </button>
-        </div>
         <section class="sessoes bemvindo" id="sessao-bemvindo">
-            <h1 class="nome texto-principal" id="typingName">Augusto B. Chupernate</h1>
+            <div class="container-switch">
+                <button id="themeToggle">
+                    <span id="icon-theme" title="Mudar para o tema claro">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="bts-modo lucide lucide-sun-icon lucide-sun">
+                            <circle cx="12" cy="12" r="4" />
+                            <path d="M12 2v2" />
+                            <path d="M12 20v2" />
+                            <path d="m4.93 4.93 1.41 1.41" />
+                            <path d="m17.66 17.66 1.41 1.41" />
+                            <path d="M2 12h2" />
+                            <path d="M20 12h2" />
+                            <path d="m6.34 17.66-1.41 1.41" />
+                            <path d="m19.07 4.93-1.41 1.41" />
+                        </svg>
+                    </span>
+                    <span class="texto-second">Tema</span>
+                </button>
+            </div>
+
+            <h1 class="nome texto-principal" id="typingName" style="text-align: center;">Augusto B. Chupernate</h1>
             <div class="container-pixel">
                 <a href="/">
                     <img src="./assets/EuPixel-parado.png" id="euPixel" alt="Imagem de Augusto Chupernate em pixel">
@@ -105,12 +107,14 @@
 
                 <div class="container-curriculo">
                     <div class="container-bt">
-                        <button type="submit" id="btContato" class="texto-second"
-                            download="./assets/meuCurriculo.pdf">Baixar Meu Currículo</button>
+                        <a href="./assets/meuCurriculo.pdf" download="CurriculoAugustoChupernate.pdf">
+                            <button type="submit" id="btContato" class="texto-second">Baixar Meu Currículo</button>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
+
         <section class="sessoes sobre" id="sessao-sobre">
             <h1 class="texto-principal">Sobre mim</h1>
             <p class="texto-second bio">Estudante do Curso Superior de Tecnologia em Análise
@@ -129,6 +133,73 @@
                 outras coisas. Estou sempre buscando evoluir mais!
             </p>
         </section>
+
+        <section class="sessoes habilidades" id="sessao-habilidades">
+            <h1 class="texto-principal">Habilidades</h1>
+
+            <div class="container-hard">
+                <h2 class="texto-second">Hard Skills</h2>
+
+                <div class="alinhar-skills">
+                    <div class="container-skills">
+                        <h4 class="texto-second">Tecnologias que domino</h4>
+
+                        <div class="tecnologias">
+                            <i class="fa-brands fa-js tecnologia" title="JavaScript"></i>
+
+                            <i class="fa-brands fa-html5 tecnologia" title="HTML5"></i>
+
+                            <i class="fa-brands fa-css3-alt tecnologia" title="CSS3"></i>
+
+                            <i class="fa-brands fa-git-alt tecnologia" title="Git"></i>
+
+                            <i class="fa-brands fa-react tecnologia" title="React"></i>
+
+                            <i class="fa-brands fa-java tecnologia" title="Java"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-soft">
+                <h2 class="texto-second">Soft Skills</h2>
+
+                <div class="alinhar-skills">
+                    <div class="container-skills">
+                        <div class="soft-skill">
+                            <i class="fa-solid fa-bullhorn"></i>
+                            <p class="texto-second">Comunicação</p>
+                        </div>
+
+                        <div class="soft-skill">
+                            <i class="fa-solid fa-handshake-angle"></i>
+                            <p class="texto-second">Trabalho em equipe</p>
+                        </div>
+
+                        <div class="soft-skill">
+                            <i class="fa-solid fa-brain"></i>
+                            <p class="texto-second">Resolução de problemas</p>
+                        </div>
+
+                        <div class="soft-skill">
+                            <i class="fa-solid fa-book"></i>
+                            <p class="texto-second">Aprendizado contínuo</p>
+                        </div>
+
+                        <div class="soft-skill">
+                            <i class="fa-solid fa-gears"></i>
+                            <p class="texto-second">Organização</p>
+                        </div>
+
+                        <div class="soft-skill">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <p class="texto-second">Proatividade</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="sessoes projetos" id="sessao-projetos">
             <h1 class="texto-principal">Projetos</h1>
             <div class="container-projetos">
@@ -152,6 +223,7 @@
                 </div>
             </div>
         </section>
+
         <section class="sessoes contato" id="sessao-contato">
             <h1 class="texto-principal">Contato</h1>
 

@@ -40,23 +40,26 @@ document.addEventListener("DOMContentLoaded", () => {
   typeEffect();
 
   const observerNav = new IntersectionObserver((entries) => {
+    let visibleSection = null;
+
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-
-        const id = entry.target.getAttribute('id');
-
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-
-          if (link.getAttribute('href') === `#${id}`) {
-            link.classList.add('active');
-          }
-        });
-
+        visibleSection = entry.target.id;
       }
     });
+
+    if (visibleSection) {
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+
+        if (link.getAttribute('href') === `#${visibleSection}`) {
+          link.classList.add('active');
+        }
+      });
+    }
   }, {
-    threshold: 0.3
+    threshold: 0.2,
+    rootMargin: "-80px 0px -60% 0px"
   });
 
   sectionsNav.forEach(section => {
@@ -64,9 +67,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   navLinks.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', function () {
       navLinks.forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
+      this.classList.add('active');
     });
   });
 

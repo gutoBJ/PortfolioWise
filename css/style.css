@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Press+Start+2P&display=swap');
 
 
 /* DARK Mode */
@@ -11,7 +11,7 @@
     --font-titulos-nome: "Press Start 2P", system-ui;
     --font-text-default: "Poppins", sans-serif;
     --border-header: 1px solid #ffffff13;
-    --box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* LIGHT MODE */
@@ -25,7 +25,7 @@ body.light {
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -55,7 +55,8 @@ header {
     left: 0;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    padding: 0 20px;
+    justify-content: space-between;
     backdrop-filter: blur(10px);
     background: var(--fundo);
     border-bottom: var(--border-header);
@@ -69,7 +70,7 @@ header.scrolled {
 }
 
 .logo {
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 2px;
     text-shadow: 0 0 10px var(--destaque);
     transition: .5s;
@@ -102,12 +103,12 @@ header button {
 
 .container-switch {
     position: relative;
-    top: 20px;
-    left: 20px;
+    top: -30px;
     width: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
+    scroll-margin-top: 80px;
 }
 
 #themeToggle {
@@ -139,10 +140,9 @@ header button {
     position: fixed;
     top: 0;
     right: 0;
-    width: 200px;
-    height: 210px;
-    padding-left: 20px;
-    padding-bottom: 10px;
+    width: 210px;
+    height: 260px;
+    padding: 10px 20px;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 0 10px #00000060;
     background-color: var(--secundario);
@@ -230,8 +230,12 @@ main {
 }
 
 .sessoes.show {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bemvindo {
+    margin-top: 20px;
 }
 
 .sessoes h1 {
@@ -240,23 +244,34 @@ main {
 }
 
 .nome {
-    text-align: center;
+    min-height: 100px;
+    font-size: clamp(18px, 5vw, 25px);
 }
 
 #typingName::after {
-  content: "|";
-  margin-left: 5px;
-  color: var(--destaque);
-  animation: blinkCursor 0.8s infinite;
+    content: "|";
+    margin-left: 5px;
+    color: var(--destaque);
+    animation: blinkCursor 0.8s infinite;
 }
 
 @keyframes blinkCursor {
-  0%, 50%, 100% { opacity: 1; }
-  25%, 75% { opacity: 0; }
+
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
 }
 
 .container-pixel {
-    width: 100%; /* tamanho real do avatar */
+    width: 100%;
+    /* tamanho real do avatar */
     height: 180px;
     overflow: hidden;
     display: flex;
@@ -286,12 +301,15 @@ main {
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
 }
 
 .container-perfil {
@@ -355,6 +373,110 @@ main {
 
 .bio {
     text-align: justify;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.container-hard h4 {
+    color: var(--texto-principal);
+}
+
+.alinhar-skills {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.container-skills {
+    width: 80%;
+    min-height: 180px;
+    height: auto;
+    background-color: var(--secundario);
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #334155;
+}
+
+.container-soft .container-skills {
+    width: 100%;
+    max-width: 300px;
+    height: 310px;
+    padding: 25px;
+}
+
+.soft-skill {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.soft-skill i {
+    color: var(--destaque);
+    text-shadow: 0 0 10px #0ea4e981;
+}
+
+.soft-skill p {
+    color: var(--texto-principal);
+}
+
+.tecnologias {
+    width: 100%;
+    height: 80%;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tecnologia {
+    font-size: 60px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.tecnologia:hover {
+    transform: translateY(-5px);
+}
+
+.tecnologia:active {
+    transform: translateY(5px);
+}
+
+.fa-js {
+    color: #F7DF1E;
+}
+
+.fa-html5 {
+    color: #E34F26;
+}
+
+.fa-css3-alt {
+    color: #2965f1;
+}
+
+.fa-git-alt {
+    color: #F1502F;
+}
+
+.fa-react {
+    color: #61DBFB;
+}
+
+.fa-java {
+    color: #007396;
+}
+
+.fa-tailwind-css {
+    color: #06b6d4;
+}
+
+.container-soft {
+    margin-top: 25px;
 }
 
 .container-projetos {
@@ -366,12 +488,15 @@ main {
 }
 
 .card-projetos {
-    width: 300px;
+    width: 100%;
+    max-width: 350px;
     min-height: 250px;
     padding: 20px;
     background-color: var(--secundario);
     cursor: pointer;
     transition: .5s;
+    border: 1px solid #334155;
+    border-radius: 5px;
 }
 
 .card-projetos:hover {
@@ -379,24 +504,35 @@ main {
     box-shadow: 0 6px 10px 0 #00000057;
 }
 
+.card-projetos:active {
+    transform: translateY(10px);
+    box-shadow: none;
+}
+
 .container-contato {
-    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .container-inputs {
-    width: 100%;
+    max-width: 700px;
     padding: 20px;
 }
 
-.container-inputs input, textarea, #btContato {
+.container-inputs input,
+.container-inputs textarea,
+#btContato {
     width: 100%;
     height: 40px;
     outline: none;
     font-size: 16px;
     margin-bottom: 15px;
-    background-color: var(--secundario);   /* secundário */
-    color: var(--texto-principal);              /* texto */
-    border: 1px solid #334155;   /* borda sutil */
+    background-color: var(--secundario);
+    /* secundário */
+    color: var(--texto-principal);
+    /* texto */
+    border: 1px solid #334155;
+    /* borda sutil */
     padding: 12px;
     border-radius: 8px;
     transition: .5s;
@@ -407,17 +543,20 @@ main {
     height: 100px;
 }
 
-.container-inputs input:focus, textarea:focus {
+.container-inputs input:focus,
+textarea:focus {
     border-color: var(--destaque);
-    box-shadow: 0 0 0 2px rgba(56,189,248,0.3);
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
 }
 
-.container-inputs input::placeholder, textarea::placeholder {
+.container-inputs input::placeholder,
+textarea::placeholder {
     font-family: var(--font-text-default);
     color: #94A3B8;
 }
 
-.container-inputs input:hover, textarea:hover {
+.container-inputs input:hover,
+textarea:hover {
     border-color: var(--destaque);
 }
 
@@ -436,12 +575,12 @@ main {
 
 #btContato:hover {
     border-color: var(--destaque);
-    box-shadow: 0 0 0 2px rgba(56,189,248,0.3);
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
     transform: scale(1.03);
 }
 
 #btContato:active {
-  transform: scale(0.95);
+    transform: scale(0.95);
 }
 
 .arrows {
@@ -476,17 +615,39 @@ main {
 }
 
 @keyframes arrow {
-    0% {opacity: 0;}
-    40% {opacity: 1;}
-    80% {opacity: 0;}
-    100% {opacity: 0;}
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 @-webkit-keyframes arrow {
-    0% {opacity: 0;}
-    40% {opacity: 1;}
-    80% {opacity: 0;}
-    100% {opacity: 0;}
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 .arrows path.a1 {
@@ -508,4 +669,52 @@ footer {
     width: 100%;
     text-align: center;
     padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .container-perfil-redes {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .container-projetos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container-skills {
+        width: 500px;
+    }
+
+    .logo {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .sessoes {
+        padding: 60px 120px;
+    }
+
+    .bio {
+        font-size: 18px;
+    }
+
+    .tecnologia {
+        font-size: 75px;
+    }
+
+    .container-projetos {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .card-projetos {
+        width: 320px;
+    }
+
+    .container-inputs {
+        max-width: 800px;
+    }
 }

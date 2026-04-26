@@ -12,6 +12,8 @@
     --font-text-default: "Poppins", sans-serif;
     --border-header: 1px solid #ffffff13;
     --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    --color-js: #F7DF1E;
+    --color-react: #61DBFB;
 }
 
 /* LIGHT MODE */
@@ -22,6 +24,8 @@ body.light {
     --texto-principal: #0F172A;
     --texto-secundario: #475569;
     --border-header: 1px solid #9c9c9c59;
+    --color-js: #c7b10e;
+    --color-react: #3cb6d4;
 }
 
 html {
@@ -55,7 +59,7 @@ header {
     left: 0;
     display: flex;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 30px;
     justify-content: space-between;
     backdrop-filter: blur(10px);
     background: var(--fundo);
@@ -84,6 +88,7 @@ header.scrolled {
     font-size: 33px;
     transition: .5s;
     color: var(--texto-secundario);
+    margin-right: 20px;
 }
 
 #menu:hover {
@@ -238,14 +243,14 @@ main {
     margin-top: 20px;
 }
 
-.sessoes h1 {
+.sessoes h1, .sessoes h2 {
     margin-bottom: 40px;
     text-align: center;
+    font-size: clamp(18px, 5vw, 25px);
 }
 
 .nome {
     min-height: 100px;
-    font-size: clamp(18px, 5vw, 25px);
 }
 
 #typingName::after {
@@ -406,6 +411,10 @@ main {
     padding: 25px;
 }
 
+.subtitulos-skills {
+    float: left;
+}
+
 .soft-skill {
     display: flex;
     column-gap: 10px;
@@ -448,7 +457,7 @@ main {
 }
 
 .fa-js {
-    color: #F7DF1E;
+    color: var(--color-js);
 }
 
 .fa-html5 {
@@ -464,7 +473,7 @@ main {
 }
 
 .fa-react {
-    color: #61DBFB;
+    color: var(--color-react);
 }
 
 .fa-java {
@@ -512,6 +521,7 @@ main {
 .container-contato {
     display: flex;
     justify-content: center;
+    margin-top: 30px;
 }
 
 .container-inputs {
@@ -583,6 +593,50 @@ textarea:hover {
     transform: scale(0.95);
 }
 
+#sessao-contato p {
+    text-align: center;
+    line-height: 16px;
+    font-weight: bold;
+}
+
+#sessao-contato p b {
+    color: var(--destaque);
+    text-shadow: 0 0 10px #0ea4e9af;
+}
+
+.container-contatos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    width: 80%;
+    min-height: 80px;
+    height: 60px;
+    background-color: var(--secundario);
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #334155;
+    position: relative;
+    left: 12%;
+}
+
+.container-contatos a {
+    transition: .5s;
+}
+
+.container-contatos a:hover {
+    transform: translateY(-6px);
+}
+
+#icon-link {
+    color: #0A66C2;
+}
+
+#icon-whats {
+    color: #25d366
+}
+
 .arrows {
     position: fixed;
     right: 40px;
@@ -599,6 +653,10 @@ textarea:hover {
 
 .arrows:hover {
     transform: translateY(-20px) rotate(180deg);
+}
+
+.arrows:active {
+    transform: translateY(20px) rotate(180deg);
 }
 
 .arrows.show {
@@ -669,6 +727,11 @@ footer {
     width: 100%;
     text-align: center;
     padding-bottom: 20px;
+    margin-top: 60px;
+}
+
+footer p {
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {

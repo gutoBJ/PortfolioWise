@@ -61,10 +61,6 @@ body {
     transition: background 0.3s, color 0.3s;
 }
 
-.sidebar {
-    display: none;
-}
-
 .texto-second {
     color: var(--texto-secundario);
     font-family: var(--font-text-default);
@@ -75,7 +71,39 @@ body {
     font-family: var(--font-titulos-nome);
 }
 
-header {
+.header-desktop {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 30px;
+    backdrop-filter: blur(10px);
+    background: var(--fundo);
+    border-bottom: var(--border-header);
+    z-index: 99;
+    transition: 0.3s;
+}
+
+.header-desktop nav {
+    width: auto;
+}
+
+.header-desktop nav ul {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+}
+
+.header-desktop nav ul li {
+    font-size: 10px;
+}
+
+.header-mobile {
     width: 100%;
     height: 60px;
     position: fixed;
@@ -522,24 +550,152 @@ main {
 
 .card-projetos {
     width: 100%;
-    max-width: 350px;
-    min-height: 250px;
-    padding: 20px;
+    max-width: 550px;
+    position: relative;
+    height: auto;
+    min-height: 180px;
+    overflow: hidden;
+    padding: 15px;
     background-color: var(--secundario);
     cursor: pointer;
     transition: .5s;
     border: 1px solid #334155;
-    border-radius: 5px;
+    border-radius: 12px;
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.25);
 }
 
 .card-projetos:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 10px 0 #00000057;
+    transform: translateY(-10px) scale(1.02);
 }
 
-.card-projetos:active {
-    transform: translateY(10px);
-    box-shadow: none;
+.mockup-notebook {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    perspective: 1200px;
+}
+
+.tela {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    height: auto;
+    overflow: hidden;
+    border-radius: 14px 14px 6px 6px;
+    border: 10px solid #111827;
+    background: #000;
+    box-shadow:
+        inset 0 0 0 2px #374151,
+        0 8px 20px rgba(0,0,0,.35);
+    position: relative;
+    margin-top: 10px;
+}
+
+.tela::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #374151;
+    box-shadow: 0 0 4px rgba(255,255,255,.2);
+    z-index: 2;
+    transform: rotateX(8deg);
+    transform-origin: bottom;
+}
+
+.tela img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.base {
+    width: 112%;
+    height: 18px;
+    margin-left: -6%;
+    background: linear-gradient(
+        to bottom,
+        #94a3b8,
+        #64748b
+    );
+    border-radius: 0 0 18px 18px;
+    position: relative;
+    box-shadow: 0 6px 10px rgba(0,0,0,.35);
+}
+
+.base::before {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 8px;
+    background: #cbd5e1;
+    border-radius: 10px;
+    left: 50%;
+    bottom: 6px;
+    transform: translateX(-50%);
+}
+
+.stack-projeto h4 {
+    margin-bottom: 5px;
+}
+
+.overlay-projeto {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.801);
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* desconta a base */
+
+    opacity: 0;
+    transition: .4s ease;
+}
+
+.container-descricao p {
+    font-size: 12px;
+}
+
+.overlay-projeto h4 {
+    font-size: 12px;
+}
+
+.stack-projeto i {
+    font-size: 30px;
+}
+
+.overlay-projeto .btn {
+    width: 200px;
+    height: 45px;
+    font-size: 12px;
+}
+
+.mockup-notebook:hover .overlay-projeto {
+    opacity: 1;
+}
+
+.mockup-notebook:hover img {
+    transform: scale(1.05);
+}
+
+.acoes-projeto {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
 
 .container-contato {
@@ -554,8 +710,7 @@ main {
 }
 
 .container-inputs input,
-.container-inputs textarea,
-#btContato {
+.container-inputs textarea {
     width: 100%;
     height: 40px;
     outline: none;
@@ -600,20 +755,28 @@ textarea:hover {
     justify-content: center;
 }
 
-#btContato {
+.btn {
     width: 200px;
     height: 50px;
     color: var(--texto-secundario);
+    font-family: var(--font-text-default);
+    background-color: var(--secundario);
+    padding: 12px;
+    border-radius: 8px;
+    outline: none;
+    text-align: center;
     cursor: pointer;
+    border: 1px solid #334155;
+    transition: .5s;
 }
 
-#btContato:hover {
+.btn:hover {
     border-color: var(--destaque);
     box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
     transform: scale(1.03);
 }
 
-#btContato:active {
+.btn:active {
     transform: scale(0.95);
 }
 
@@ -658,14 +821,14 @@ textarea:hover {
     gap: 20px;
 }
 
-.content-contatos a {
+.links-btn {
     display: inline-flex;
     align-items: center;
     gap: 5px;
     transition: .5s;
 }
 
-.content-contatos a:hover {
+.links-btn:hover {
     transform: translateY(-6px);
     color: var(--destaque);
 }
@@ -797,6 +960,14 @@ footer p {
 }
 
 @media (min-width: 1024px) {
+    .header-desktop {
+        display: flex;
+    }
+
+    .header-mobile {
+        display: none;
+    }
+
     .sessoes {
         padding: 60px 120px;
     }

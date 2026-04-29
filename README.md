@@ -43,7 +43,7 @@ O site apresenta:
 
 ## 🌐 Acesse o Projeto
 
-- 🔗 **Repositório:** *(coloque aqui o link do GitHub)*  
+- 🔗 **Repositório:** *https://github.com/gutoBJ/PortfolioWise*  
 - 🚀 **Deploy:** *(coloque aqui o GitHub Pages)*  
 
 ---
@@ -66,9 +66,8 @@ O site apresenta:
 
 ## 📬 Contato
 
-- GitHub: https://github.com/gutoBJ  
-- LinkedIn: *(coloque seu link)*  
-- Instagram: *(opcional)*  
+- GitHub: https://github.com/gutoBJ
+- LinkedIn: *https://www.linkedin.com/in/augusto-chupernate-29a767253/* 
 
 ---
 

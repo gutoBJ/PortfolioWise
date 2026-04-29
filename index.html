@@ -2,39 +2,62 @@
 <html lang="pt-br">
 
 <head>
+    <!-- Configurações básicas da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfólio de Augusto Benjamin Chupernate, desenvolvedor front-end em formação.">
+
     <title>Portfólio - Augusto Benjamin Chupernate</title>
+
+    <!-- Reset + estilos globais -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
     <link rel="shortcut icon" href="./assets/Icon.png" type="image/x-icon">
+
+    <!-- Biblioteca de ícones -->
     <script src="https://kit.fontawesome.com/664287d9ba.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="sidebar">
+
+    <!-- Sidebar futura para navegação desktop -->
+    <header class="header-desktop">
+        <a href="/">
+            <h3 class="logo texto-principal">Augusto.<strong id="text-dev">dev</strong></h3>
+        </a>
         <nav>
             <ul>
-                <li><a href="#sessao-perfil">Meu perfil</a></li>
-                <li><a href="#sessao-perfil"></a></li>
+                <li><a href="#sessao-bemvindo" class="texto-principal nav-link">Bem-vindo</a></li>
+                <li><a href="#sessao-perfil" class="texto-principal nav-link">Meu perfil</a></li>
+                <li><a href="#sessao-sobre" class="texto-principal nav-link">Sobre mim</a></li>
+                <li><a href="#sessao-habilidades" class="texto-principal nav-link">Habilidades</a></li>
+                <li><a href="#sessao-projetos" class="texto-principal nav-link">Projetos</a></li>
+                <li><a href="#sessao-contato" class="texto-principal nav-link">Contato</a></li>
             </ul>
         </nav>
-    </div>
+    </header>
 
-    <header>
+    <!-- Cabeçalho principal -->
+    <header class="header-mobile">
+        <!-- Logo/Nome -->
         <a href="/">
             <h3 class="logo texto-principal">Augusto.<strong id="text-dev">dev</strong></h3>
         </a>
 
+        <!-- Botão de abrir menu mobile -->
         <button id="bt-menu" aria-label="Abrir menu">
             <i class="fa-solid fa-bars" id="menu"></i>
         </button>
 
+        <!-- Navegação mobile -->
         <div id="nav-mobiles">
+            <!-- Botão de fechar menu -->
             <button id="bt-close" aria-label="Fechar menu">
                 <i class="fa-regular fa-circle-xmark" id="close"></i>
             </button>
+
             <nav>
                 <ul>
                     <li><a href="#sessao-bemvindo" class="texto-principal nav-link">Bem-vindo</a></li>
@@ -49,10 +72,15 @@
     </header>
 
     <main>
+
+        <!-- Seção inicial / apresentação -->
         <section class="sessoes bemvindo" id="sessao-bemvindo">
+
+            <!-- Alternador de tema -->
             <div class="container-switch">
                 <button id="themeToggle">
                     <span id="icon-theme" title="Mudar para o tema claro">
+                        <!-- Ícone padrão (substituído via JS) -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="bts-modo lucide lucide-sun-icon lucide-sun">
@@ -71,22 +99,35 @@
                 </button>
             </div>
 
+            <!-- Nome com efeito de digitação -->
             <h1 class="nome texto-principal" id="typingName">Augusto B. Chupernate</h1>
+
+            <!-- Avatar pixel-art animado -->
             <div class="container-pixel">
                 <a href="/">
                     <img src="./assets/EuPixel-parado.png" id="euPixel" alt="Imagem de Augusto Chupernate em pixel">
                 </a>
             </div>
-            <h2 class="texto-second texto-dev">Procurando por um <br> <strong class="texto-principal">Desenvolvedor Junior</strong>?
+
+            <!-- Chamada principal -->
+            <h2 class="texto-second texto-dev">
+                Procurando por um <br>
+                <strong class="texto-principal">Desenvolvedor Junior</strong>?
             </h2>
         </section>
+
+        <!-- Perfil -->
         <section class="sessoes perfil" id="sessao-perfil">
             <h1 class="texto-principal">Meu perfil</h1>
+
             <div class="container-perfil">
+
+                <!-- Foto + redes sociais -->
                 <div class="container-perfil-redes">
                     <div class="container-foto">
                         <img src="./assets/minhaFoto.jpeg" alt="Minha foto">
                     </div>
+
                     <div class="container-redes">
                         <a href="https://github.com/gutoBJ" target="_blank" title="Github">
                             <i class="fa-brands fa-github"></i>
@@ -103,10 +144,10 @@
                     </div>
                 </div>
 
+                <!-- Download do currículo -->
                 <div class="container-curriculo">
                     <div class="container-bt">
-                        <a href="./assets/meuCurriculo.pdf" download="CurriculoAugustoChupernate.pdf" id="btContato"
-                            class="texto-second">
+                        <a href="./assets/meuCurriculo.pdf" download="CurriculoAugustoChupernate.pdf" class="btn">
                             Baixar Meu Currículo
                         </a>
                     </div>
@@ -114,9 +155,13 @@
             </div>
         </section>
 
+        <!-- Sobre mim -->
         <section class="sessoes sobre" id="sessao-sobre">
             <h1 class="texto-principal">Sobre mim</h1>
-            <p class="texto-second bio">Estudante do Curso Superior de Tecnologia em Análise
+
+            <!-- Biografia profissional -->
+            <p class="texto-second bio">
+                Estudante do Curso Superior de Tecnologia em Análise
                 e Desenvolvimento de Sistemas (4º Período) na
                 Faculdade Senac PR, com base sólida em HTML, CSS e
                 JavaScript, e me desenvolvendo em React e Node.js.
@@ -133,9 +178,11 @@
             </p>
         </section>
 
+        <!-- Skills -->
         <section class="sessoes habilidades" id="sessao-habilidades">
             <h1 class="texto-principal">Habilidades</h1>
 
+            <!-- Hard Skills -->
             <div class="container-hard">
                 <h2 class="texto-second subtitulos-skills">Hard Skills</h2>
 
@@ -143,28 +190,27 @@
                     <div class="container-skills">
                         <h4 class="texto-second">Tecnologias que domino</h4>
 
+                        <!-- Stack principal -->
                         <div class="tecnologias">
                             <i class="fa-brands fa-js tecnologia" title="JavaScript"></i>
-
                             <i class="fa-brands fa-html5 tecnologia" title="HTML5"></i>
-
                             <i class="fa-brands fa-css3-alt tecnologia" title="CSS3"></i>
-
                             <i class="fa-brands fa-git-alt tecnologia" title="Git"></i>
-
                             <i class="fa-brands fa-react tecnologia" title="React"></i>
-
                             <i class="fa-brands fa-java tecnologia" title="Java"></i>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Soft Skills -->
             <div class="container-soft">
                 <h2 class="texto-second subtitulos-skills">Soft Skills</h2>
 
                 <div class="alinhar-skills">
                     <div class="container-skills">
+
+                        <!-- Lista de competências comportamentais -->
                         <div class="soft-skill">
                             <i class="fa-solid fa-bullhorn"></i>
                             <p class="texto-second">Comunicação</p>
@@ -199,41 +245,172 @@
             </div>
         </section>
 
+        <!-- Projetos -->
         <section class="sessoes projetos" id="sessao-projetos">
             <h1 class="texto-principal">Projetos</h1>
+
             <div class="container-projetos">
+
+                <!-- Card de projeto em formato notebook -->
                 <div class="card-projetos">
-                    <figure>
-                        <img src="" alt="Descrição da Imagem">
-                        <figcaption class="texto-second">Esta é a legenda da imagem ou do card</figcaption>
-                        <button>Ver projeto</button>
-                        <a href=""><i class="fa-brands fa-github"></i> Ver no github</a>
-                    </figure>
+                    <div class="mockup-notebook">
+
+                        <h4 class="texto-second">Projeto Batman</h4>
+
+                        <!-- Área visual do notebook -->
+                        <div class="tela">
+                            <img src="./assets/projeto12.png" alt="Projeto Batman">
+
+                            <!-- Overlay com detalhes do projeto -->
+                            <div class="overlay-projeto">
+
+                                <div class="container-descricao">
+                                    <h4 class="texto-second">Descrição:</h4>
+                                    <p class="texto-second">
+                                        Site de compra de ingressos do filme Batman 2022
+                                    </p>
+                                </div>
+
+                                <!-- Stack utilizada -->
+                                <div class="stack-projeto">
+                                    <h4 class="texto-second">Tecnologias utilizadas:</h4>
+                                    <i class="fa-brands fa-html5 tecnologia"></i>
+                                    <i class="fa-brands fa-css3-alt tecnologia"></i>
+                                </div>
+
+                                <!-- Links do projeto -->
+                                <div class="acoes-projeto">
+                                    <a href="https://gutobj.github.io/projeto_batman/" target="_blank" class="btn">
+                                        Ver demo
+                                    </a>
+
+                                    <a href="https://github.com/gutoBJ/projeto_batman" target="_blank"
+                                        class="texto-second links-btn">
+                                        <i class="fa-brands fa-github"></i>
+                                        Ver repositório
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Base do notebook -->
+                        <div class="base"></div>
+
+                    </div>
+
                 </div>
                 <div class="card-projetos">
-                    <figure>
-                        <img src="" alt="Descrição da Imagem">
-                        <figcaption class="texto-second">Esta é a legenda da imagem ou do card</figcaption>
-                    </figure>
+                    <div class="mockup-notebook">
+
+                        <h4 class="texto-second">Projeto Batman</h4>
+
+                        <!-- Área visual do notebook -->
+                        <div class="tela">
+                            <img src="./assets/projeto12.png" alt="Projeto Batman">
+
+                            <!-- Overlay com detalhes do projeto -->
+                            <div class="overlay-projeto">
+
+                                <div class="container-descricao">
+                                    <h4 class="texto-second">Descrição:</h4>
+                                    <p class="texto-second">
+                                        Site de compra de ingressos do filme Batman 2022
+                                    </p>
+                                </div>
+
+                                <!-- Stack utilizada -->
+                                <div class="stack-projeto">
+                                    <h4 class="texto-second">Tecnologias utilizadas:</h4>
+                                    <i class="fa-brands fa-html5 tecnologia"></i>
+                                    <i class="fa-brands fa-css3-alt tecnologia"></i>
+                                </div>
+
+                                <!-- Links do projeto -->
+                                <div class="acoes-projeto">
+                                    <a href="https://gutobj.github.io/projeto_batman/" target="_blank" class="btn">
+                                        Ver demo
+                                    </a>
+
+                                    <a href="https://github.com/gutoBJ/projeto_batman" target="_blank"
+                                        class="texto-second links-btn">
+                                        <i class="fa-brands fa-github"></i>
+                                        Ver repositório
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Base do notebook -->
+                        <div class="base"></div>
+
+                    </div>
+
                 </div>
                 <div class="card-projetos">
-                    <figure>
-                        <img src="" alt="Descrição da Imagem">
-                        <figcaption class="texto-second">Esta é a legenda da imagem ou do card</figcaption>
-                    </figure>
+                    <div class="mockup-notebook">
+
+                        <h4 class="texto-second">Projeto Batman</h4>
+
+                        <!-- Área visual do notebook -->
+                        <div class="tela">
+                            <img src="./assets/projeto12.png" alt="Projeto Batman">
+
+                            <!-- Overlay com detalhes do projeto -->
+                            <div class="overlay-projeto">
+
+                                <div class="container-descricao">
+                                    <h4 class="texto-second">Descrição:</h4>
+                                    <p class="texto-second">
+                                        Site de compra de ingressos do filme Batman 2022
+                                    </p>
+                                </div>
+
+                                <!-- Stack utilizada -->
+                                <div class="stack-projeto">
+                                    <h4 class="texto-second">Tecnologias utilizadas:</h4>
+                                    <i class="fa-brands fa-html5 tecnologia"></i>
+                                    <i class="fa-brands fa-css3-alt tecnologia"></i>
+                                </div>
+
+                                <!-- Links do projeto -->
+                                <div class="acoes-projeto">
+                                    <a href="https://gutobj.github.io/projeto_batman/" target="_blank" class="btn">
+                                        Ver demo
+                                    </a>
+
+                                    <a href="https://github.com/gutoBJ/projeto_batman" target="_blank"
+                                        class="texto-second links-btn">
+                                        <i class="fa-brands fa-github"></i>
+                                        Ver repositório
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Base do notebook -->
+                        <div class="base"></div>
+
+                    </div>
+
                 </div>
             </div>
         </section>
 
+        <!-- Contato -->
         <section class="sessoes contato" id="sessao-contato">
             <h1 class="texto-principal">Contato</h1>
+
             <p class="texto-second">
-                Gostou do <strong>meu trabalho</strong>? <br> <br> Que tal <strong>conversarmos</strong> sobre <strong>oportunidades</strong>?
+                Gostou do <strong>meu trabalho</strong>? <br><br>
+                Que tal <strong>conversarmos</strong> sobre
+                <strong>oportunidades</strong>?
             </p>
 
+            <!-- Formulário de contato -->
             <div class="container-contato">
                 <form action="" method="post">
                     <div class="container-inputs">
+
                         <label for="nome" class="texto-second">Nome:</label>
                         <input type="text" id="nome" name="nome" placeholder="Insira seu nome completo" required>
 
@@ -245,25 +422,40 @@
                             required></textarea>
 
                         <div class="container-bt">
-                            <button type="submit" id="btContato" class="texto-second">Enviar</button>
+                            <button type="submit" class="texto-second btn">Enviar</button>
                         </div>
                     </div>
                 </form>
             </div>
 
+            <!-- Contatos alternativos -->
             <div class="container-contatos">
-                <h5 class="texto-second"><strong>Ou</strong> entre em contato por outros meios:</h5>
+                <h5 class="texto-second">
+                    <strong>Ou</strong> entre em contato por outros meios:
+                </h5>
+
                 <div class="content-contatos">
-                    <a href="mailto:gutochupernate2@gmail.com" class="texto-second"><i class="fa-solid fa-envelope"></i> Email</a>
-                    <a href="https://www.linkedin.com/in/augusto-chupernate-29a767253/" target="_blank" class="texto-second"><i
-                            class="fa-brands fa-linkedin" id="icon-link"></i> LinkedIn</a>
-                    <a href="https://github.com/gutoBJ" target="_blank" class="texto-second"><i class="fa-brands fa-github"></i> GitHub</a>
-                    <a href="https://wa.me/41995594107" target="_blank" class="texto-second"><i class="fa-brands fa-whatsapp"
-                            id="icon-whats"></i> WhatsApp</a>
+                    <a href="mailto:gutochupernate2@gmail.com" class="texto-second links-btn">
+                        <i class="fa-solid fa-envelope"></i> Email
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/augusto-chupernate-29a767253/" target="_blank"
+                        class="texto-second links-btn">
+                        <i class="fa-brands fa-linkedin" id="icon-link"></i> LinkedIn
+                    </a>
+
+                    <a href="https://github.com/gutoBJ" target="_blank" class="texto-second links-btn">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+
+                    <a href="https://wa.me/41995594107" target="_blank" class="texto-second links-btn">
+                        <i class="fa-brands fa-whatsapp" id="icon-whats"></i> WhatsApp
+                    </a>
                 </div>
             </div>
         </section>
 
+        <!-- Botão flutuante para voltar ao topo -->
         <a href="#sessao-bemvindo" title="Voltar ao topo">
             <svg class="arrows">
                 <path class="a1" d="M0 0 L30 32 L60 0"></path>
@@ -271,14 +463,17 @@
                 <path class="a3" d="M0 40 L30 72 L60 40"></path>
             </svg>
         </a>
+
     </main>
 
+    <!-- Rodapé -->
     <footer>
         <p class="texto-second">Augusto B. Chupernate</p>
         <p class="texto-second">Todos os direitos reservados ©</p>
     </footer>
 
-    <script src="./script/script.js"></script>
+    <!-- Entrada principal dos módulos JS -->
+    <script type="module" src="./script/main.js"></script>
 </body>
 
 </html>

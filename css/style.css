@@ -648,8 +648,9 @@ main {
 .overlay-projeto {
     position: absolute;
     inset: 0;
-    background: rgba(15, 23, 42, 0.801);
+    background: rgba(15, 23, 42, 0.87);
     padding: 20px;
+    color: var(--texto-principal);
 
     display: flex;
     flex-direction: column;
@@ -793,11 +794,12 @@ textarea:hover {
 
 .container-contatos {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 10px;
-    margin-top: 30px;
     width: 80%;
+    max-width: 500px;
     min-height: 80px;
     height: 60px;
     background-color: var(--secundario);
@@ -806,7 +808,6 @@ textarea:hover {
     border: 1px solid #334155;
     width: min(80%, 600px);
     margin: 30px auto 0;
-    position: static;
 }
 
 .container-contatos strong {
@@ -980,16 +981,35 @@ footer p {
         font-size: 75px;
     }
 
+    .sessoes {
+        margin: 0;
+        padding-top: 10px;
+    }
+
+    .bemvindo {
+        padding: 60px;
+    }
+
+    .projetos {
+        background-color: red;
+    }
+
     .container-projetos {
         flex-direction: row;
         justify-content: center;
+        align-items: center;
+        max-height: 300px;
     }
 
     .card-projetos {
         width: 320px;
     }
 
+    .container-contatos {
+
+    }
+
     .container-inputs {
-        max-width: 800px;
+        max-width: 500px;
     }
 }

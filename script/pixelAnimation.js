@@ -15,7 +15,7 @@ export function initPixelAnimation() {
     let count = 0;
 
     waveInterval = setInterval(() => {
-      imgPixel.src = `./assets/EuPixel-acenando${frame}.png`;
+      imgPixel.src = `./assets/images/profile/EuPixel-acenando${frame}.png`;
 
       frame = frame === 1 ? 2 : 1;
       count++;
@@ -30,7 +30,7 @@ export function initPixelAnimation() {
     clearInterval(waveInterval);
     waveInterval = null;
     isWaving = false;
-    imgPixel.src = "./assets/EuPixel-parado.png";
+    imgPixel.src = "./assets/images/profile/EuPixel-parado.png";
   }
 
   function blink() {
@@ -40,10 +40,10 @@ export function initPixelAnimation() {
         return;
       }
 
-      imgPixel.src = "./assets/EuPixel-piscando.png";
+      imgPixel.src = "./assets/images/profile/EuPixel-piscando.png";
 
       setTimeout(() => {
-        imgPixel.src = "./assets/EuPixel-parado.png";
+        imgPixel.src = "./assets/images/profile/EuPixel-parado.png";
       }, 120);
 
       setTimeout(piscar, Math.random() * 4000 + 2000);

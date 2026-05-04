@@ -35,7 +35,8 @@ html {
 /* Scrollbar */
 ::-webkit-scrollbar {
     width: 12px;
-    border-left: 1px solid #334155; /* borda só na raiz */
+    border-left: 1px solid #334155;
+    /* borda só na raiz */
 }
 
 ::-webkit-scrollbar-track {
@@ -295,7 +296,8 @@ main {
     margin-top: 20px;
 }
 
-.sessoes h1, .sessoes h2 {
+.sessoes h1,
+.sessoes h2 {
     margin-bottom: 40px;
     text-align: center;
     font-size: clamp(18px, 5vw, 25px);
@@ -495,8 +497,9 @@ main {
 }
 
 .tecnologia {
+    display: inline-block;
     font-size: 60px;
-    transition: .5s;
+    transition: transform .5s ease;
     cursor: pointer;
 }
 
@@ -532,8 +535,12 @@ main {
     color: #007396;
 }
 
-.fa-tailwind-css {
+.devicon-tailwindcss-plain {
     color: #06b6d4;
+}
+
+.devicon-typescript-plain {
+    color: #3178c6;
 }
 
 .container-soft {
@@ -562,7 +569,7 @@ main {
     border: 1px solid #334155;
     border-radius: 12px;
     box-shadow:
-        0 15px 30px rgba(0,0,0,.25);
+        0 15px 30px rgba(0, 0, 0, .25);
 }
 
 .card-projetos:hover {
@@ -587,7 +594,7 @@ main {
     background: #000;
     box-shadow:
         inset 0 0 0 2px #374151,
-        0 8px 20px rgba(0,0,0,.35);
+        0 8px 20px rgba(0, 0, 0, .35);
     position: relative;
     margin-top: 10px;
 }
@@ -602,7 +609,7 @@ main {
     height: 8px;
     border-radius: 50%;
     background: #374151;
-    box-shadow: 0 0 4px rgba(255,255,255,.2);
+    box-shadow: 0 0 4px rgba(255, 255, 255, .2);
     z-index: 2;
     transform: rotateX(8deg);
     transform-origin: bottom;
@@ -619,14 +626,12 @@ main {
     width: 112%;
     height: 18px;
     margin-left: -6%;
-    background: linear-gradient(
-        to bottom,
-        #94a3b8,
-        #64748b
-    );
+    background: linear-gradient(to bottom,
+            #94a3b8,
+            #64748b);
     border-radius: 0 0 18px 18px;
     position: relative;
-    box-shadow: 0 6px 10px rgba(0,0,0,.35);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .35);
 }
 
 .base::before {
@@ -660,7 +665,8 @@ main {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* desconta a base */
+    height: 100%;
+    /* desconta a base */
 
     opacity: 0;
     transition: .4s ease;
@@ -971,6 +977,12 @@ footer p {
 
     .sessoes {
         padding: 60px 120px;
+        margin: 0;
+        padding-top: 10px;
+    }
+
+    .bemvindo {
+        padding: 60px;
     }
 
     .bio {
@@ -981,35 +993,41 @@ footer p {
         font-size: 75px;
     }
 
-    .sessoes {
-        margin: 0;
-        padding-top: 10px;
-    }
-
-    .bemvindo {
-        padding: 60px;
-    }
-
-    .projetos {
-        background-color: red;
+    .container-hard, .container-soft {
+        padding-left: 100px;
     }
 
     .container-projetos {
-        flex-direction: row;
+        width: min(100%, 1400px);
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
-        max-height: 300px;
+        align-items: stretch;
+        gap: 30px;
     }
 
     .card-projetos {
-        width: 320px;
+        flex: 1 1 380px;
+        max-width: 420px;
     }
 
-    .container-contatos {
-
+    .card-projetos .btn {
+        width: 140px;
+        height: 40px;
+        padding: 8px 12px;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .container-inputs {
         max-width: 500px;
+    }
+
+    .links-btn {
+        font-size: 12px;
+        width: auto;
     }
 }

@@ -374,56 +374,95 @@ main {
 .container-perfil {
     width: 100%;
     margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
-.container-perfil-redes {
-    width: 100%;
+.container-perfil-esquerda {
     display: flex;
-    row-gap: 10px;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 .container-foto {
-    width: 200px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--destaque);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
 }
 
 .container-foto img {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nome-perfil {
+    color: var(--texto-principal);
+    text-align: center;
+    line-height: 1.5;
+}
+
+.cargo-perfil {
+    color: var(--texto-principal);
+    font-size: 16px;
+    text-align: center;
+}
+
+.cargo-perfil strong {
+    text-shadow: 0 0 10px var(--destaque);
 }
 
 .container-redes {
-    width: 100%;
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .container-redes i {
+    font-size: 28px;
     color: var(--texto-secundario);
-    cursor: pointer;
-    font-size: 25px;
-    transition: .5s;
+    transition: .4s;
 }
 
 .container-redes i:hover {
     color: var(--destaque);
-    transform: scale(1.08);
+    transform: translateY(-4px);
 }
 
-.container-curriculo {
+.container-perfil-direita {
     width: 100%;
+    max-width: 450px;
+    padding: 25px;
+    background-color: var(--secundario);
+    border: 1px solid #334155;
+    border-radius: 12px;
+}
+
+.info-perfil {
     display: flex;
     flex-direction: column;
-    margin-top: 60px;
-    align-items: center;
+    gap: 20px;
+}
+
+.info-perfil p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.info-perfil i {
+    color: var(--destaque);
+    text-shadow: 0 0 10px #0ea4e981;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.container-bt {
+    margin-top: 30px;
 }
 
 .links {
@@ -431,10 +470,15 @@ main {
 }
 
 .bio {
-    text-align: justify;
-    line-height: 1.8;
     max-width: 800px;
     margin: 0 auto;
+}
+
+.bio p {
+    text-indent: 20px;
+    margin-bottom: 10px;
+    text-align: justify;
+    line-height: 1.8;
 }
 
 .container-hard h4 {
@@ -445,28 +489,37 @@ main {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .container-skills {
-    width: 80%;
+    width: 100%;
+    max-width: 500px;
+    margin-inline: auto;
     min-height: 180px;
     height: auto;
     background-color: var(--secundario);
     border-radius: 8px;
-    padding: 10px;
+    padding: 20px;
     border: 1px solid #334155;
+    box-sizing: border-box;
 }
 
 .container-soft .container-skills {
     width: 100%;
     max-width: 300px;
-    height: 310px;
+    margin-inline: auto;
+    min-height: 310px;
+    height: auto;
     padding: 25px;
 }
 
 .subtitulos-skills {
-    float: left;
+    display: block;
+    text-align: left;
+    margin-bottom: 20px;
 }
 
 .soft-skill {
@@ -572,6 +625,13 @@ main {
         0 15px 30px rgba(0, 0, 0, .25);
 }
 
+.hint-mobile {
+    font-size: 11px;
+    color: var(--texto-secundario);
+    text-align: center;
+    margin-top: 5px;
+}
+
 .card-projetos:hover {
     transform: translateY(-10px) scale(1.02);
 }
@@ -582,6 +642,49 @@ main {
     height: 100%;
     margin: 0 auto;
     perspective: 1200px;
+}
+
+.modal-projeto {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-projeto.active {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--secundario);
+    width: 90%;
+    max-width: 420px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    overflow-y: auto;
+    border-radius: 12px;
+    padding: 25px;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--texto-secundario);
+}
+
+.modal-close:hover {
+    color: var(--destaque);
 }
 
 .tela {
@@ -653,7 +756,7 @@ main {
 .overlay-projeto {
     position: absolute;
     inset: 0;
-    background: rgba(15, 23, 42, 0.87);
+    background: rgba(15, 23, 42, 0.932);
     padding: 20px;
     color: var(--texto-principal);
 
@@ -662,14 +765,9 @@ main {
     justify-content: center;
     gap: 10px;
 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* desconta a base */
-
     opacity: 0;
-    transition: .4s ease;
+    pointer-events: none;
+    transition: opacity .4s ease;
 }
 
 .container-descricao p {
@@ -690,8 +788,11 @@ main {
     font-size: 12px;
 }
 
-.mockup-notebook:hover .overlay-projeto {
-    opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+    .mockup-notebook:hover .overlay-projeto {
+        opacity: 1;
+        pointer-events: auto;
+    }
 }
 
 .mockup-notebook:hover img {
@@ -712,7 +813,7 @@ main {
 }
 
 .container-inputs {
-    max-width: 700px;
+    max-width: 500px;
     padding: 20px;
 }
 
@@ -721,7 +822,7 @@ main {
     width: 100%;
     height: 40px;
     outline: none;
-    font-size: 16px;
+    font-size: 13px;
     margin-bottom: 15px;
     background-color: var(--secundario);
     /* secundário */
@@ -807,7 +908,7 @@ textarea:hover {
     width: 80%;
     max-width: 500px;
     min-height: 80px;
-    height: 60px;
+    height: 100px;
     background-color: var(--secundario);
     border-radius: 8px;
     padding: 10px;
@@ -825,12 +926,13 @@ textarea:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .links-btn {
     display: inline-flex;
     align-items: center;
+    font-size: 12px;
     gap: 5px;
     transition: .5s;
 }
@@ -946,10 +1048,6 @@ footer p {
 }
 
 @media (min-width: 768px) {
-    .container-perfil-redes {
-        flex-direction: row;
-        gap: 40px;
-    }
 
     .container-projetos {
         flex-direction: row;
@@ -957,13 +1055,81 @@ footer p {
         justify-content: center;
     }
 
-    .container-skills {
-        width: 500px;
+    .alinhar-skills {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 300px 300px;
+        /* hard maior, soft menor */
+        gap: 40px;
+        align-items: start;
+        row-gap: 100px;
     }
+
+    /* Hard e Soft como colunas iguais */
+    .container-hard,
+    .container-soft {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    /* Títulos alinhados no topo */
+    .subtitulos-skills {
+        font-size: 18px;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .container-hard .container-skills h4 {
+        margin-bottom: 40px;
+    }
+
+    /* Cards internos com mesma largura */
+    .container-hard .container-skills,
+    .container-soft .container-skills {
+        width: 100%;
+        max-width: none;
+        min-height: 320px;
+        margin: 0;
+    }
+
+
+    .tecnologia {
+        font-size: 75px;
+    }
+
+    .tecnologias {
+        justify-content: space-evenly;
+        row-gap: 30px;
+    }
+
 
     .logo {
         font-size: 14px;
     }
+
+    .links-btn {
+        font-size: 16px;
+        width: auto;
+    }
+}
+
+@media (max-width: 1023px) {
+
+
+    .overlay-projeto {
+        pointer-events: none;
+    }
+
+    .card-projetos.active .overlay-projeto {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+
 }
 
 @media (min-width: 1024px) {
@@ -989,12 +1155,58 @@ footer p {
         font-size: 18px;
     }
 
+
+    .tecnologias {
+        justify-content: space-evenly;
+        align-content: center;
+        row-gap: 30px;
+    }
+
+
     .tecnologia {
         font-size: 75px;
     }
 
-    .container-hard, .container-soft {
-        padding-left: 100px;
+    /* Container geral da sessão */
+
+    .alinhar-skills {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 300px 300px;
+        /* hard maior, soft menor */
+        gap: 40px;
+        align-items: start;
+    }
+
+    /* Hard e Soft como colunas iguais */
+    .container-hard,
+    .container-soft {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    /* Títulos alinhados no topo */
+    .subtitulos-skills {
+        font-size: 18px;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .container-hard .container-skills h4 {
+        margin-bottom: 40px;
+    }
+
+    /* Cards internos com mesma largura */
+    .container-hard .container-skills,
+    .container-soft .container-skills {
+        width: 100%;
+        max-width: none;
+        min-height: 320px;
+        margin: 0;
     }
 
     .container-projetos {
@@ -1022,12 +1234,50 @@ footer p {
         align-items: center;
     }
 
-    .container-inputs {
-        max-width: 500px;
+    .links-btn {
+        font-size: 16px;
+        width: auto;
     }
 
-    .links-btn {
-        font-size: 12px;
-        width: auto;
+    .container-perfil {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        max-width: 1000px;
+        margin: 50px auto 0;
+    }
+
+    .container-perfil-esquerda,
+    .container-perfil-direita {
+        flex: 1;
+        max-width: 450px;
+    }
+
+    .hint-mobile {
+        display: none;
+    }
+
+    .nome-perfil {
+        font-size: 20px;
+    }
+
+    .cargo-perfil {
+        font-size: 18px;
+    }
+
+    .mockup-notebook:hover .overlay-projeto {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .modal-projeto {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1260px) {
+    .container-perfil {
+        flex-direction: row;
     }
 }

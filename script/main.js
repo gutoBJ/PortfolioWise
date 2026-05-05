@@ -5,6 +5,7 @@ import { initNavigation } from './navigation.js';
 import { initPixelAnimation } from './pixelAnimation.js';
 import { initScrollEffects } from './scrollEffects.js';
 import { initSectionObserver } from './sectionObserver.js';
+import { overlayCards } from './overlayCards.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initMenu();
@@ -14,4 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initPixelAnimation();
   initScrollEffects();
   initSectionObserver();
+  overlayCards();
 });

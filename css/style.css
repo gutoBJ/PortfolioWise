@@ -1,6 +1,7 @@
+/* Importação de fonts de texto do google */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Press+Start+2P&display=swap');
 
-
+/* Criação das variáveis css */
 /* DARK Mode */
 :root {
     --fundo: #0F172A;
@@ -28,11 +29,12 @@ body.light {
     --color-react: #3cb6d4;
 }
 
+/* Scroll da página suave ao navegar pelas sessões */
 html {
     scroll-behavior: smooth;
 }
 
-/* Scrollbar */
+/* Estilização do Scrollbar */
 ::-webkit-scrollbar {
     width: 12px;
     border-left: 1px solid #334155;
@@ -56,6 +58,7 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background-color: #0c89c4;
 }
+
 
 body {
     background-color: var(--fundo);
